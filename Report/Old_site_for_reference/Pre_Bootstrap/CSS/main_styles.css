@@ -1,0 +1,127 @@
+body 
+{
+    background-color: white;
+    font-family: 'Satisfy', cursive;
+    padding: 0; 
+    margin: 0; 
+    min-width: 600px;
+    min-height: 600px;
+}
+
+header, footer {
+    padding: 0; 
+    margin: 0;
+    width: 100%;
+    text-align: center;
+}
+
+header {  
+    height: 300px; 
+}
+
+footer { 
+    height: 25px; clear: both; 
+}
+
+.center_collage
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title_text
+{
+    font-size: 400%;
+    padding: 50px;
+}
+
+.sub_title
+{
+    font-size: 200%;
+    padding: -20px;
+}
+
+.enter
+{
+    font-size: 150%;
+    padding: 40px;
+}
+
+.link
+{
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.collage_box
+{
+    width: 1280px;
+    height: 432px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.centered_one {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  
+  /*So the image center is considered, not the top left corner.*/
+  transform: translate(-50%, -50%);
+}
+
+.centered_two {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_three {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_four {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_five {
+  position: fixed;
+  top: 90%;
+  left: 50%;
+  clear: left;
+  clear: right;
+  transform: translate(-50%, -50%);
+}
+
+.centered_six {
+  float: left;
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  clear: left;
+  clear: right;
+  transform: translate(-50%, -50%);
+}
+
+.centered_seven {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.centered_eight {
+  position: fixed;
+  top: 3%;
+  left: 2%;
+  /*transform: translate(0%, -50%);*/
+}

@@ -1,0 +1,69 @@
+/* All icons related CSS for SVG files.*/
+
+.icon
+{
+  width: 35px;
+  height: 35px;
+  z-index: 1;
+}
+
+.small_icon
+{
+  width: 30px;
+  height: 30px;
+}
+
+.tiny_icon
+{
+  margin-left: 20px; 
+  width: 18px;
+  height: 15px;
+}
+
+.modal_icon
+{
+	  margin: 5px; 
+  	width: 35px;
+  	height: 35px;
+}
+
+.email_modal_icon
+{
+    margin: 5px; 
+    width: 10px;
+    height: 10px;
+    pointer-events: none;
+}
+
+.send_modal_icon
+{
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+.modal_icon_right
+{
+  position: absolute;
+  right: 10px;
+}
+
+.menu_icon_right
+{
+  position: absolute;
+  right: 10px;
+}
+
+.carousel_icon
+{
+  width: 20px;
+  height: 20px;
+  margin: 30px;
+}
+
+.user_icon_choice
+{
+  width: 40px;
+  height: 40px;
+  margin: 30px;
+}

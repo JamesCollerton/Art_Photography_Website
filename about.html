@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+
+<!-- Declares the necessary HTML5 type. -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang ="en-GB" xml:lang="en-GB">
+
+<head>
+
+	<!-- NOTE: JS script links are contained at the bottom of the page for
+	faster loading. -->
+
+	<!-- Linked stylesheets -->
+	<!-- Note the first one is to normalize the css across browsers. -->
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/whitespace_styles.css"/>
+	<link rel="stylesheet" href="css/fade_functions.css"/>
+	<link rel="stylesheet" href="css/text_on_img.css"/>
+	<link rel="stylesheet" href="css/fonts.css"/>
+	<link rel="stylesheet" href="css/icon.css"/>
+	<link rel="stylesheet" href="css/misc_styles.css"/>
+	<link rel="stylesheet" href="css/my_email_modal.css"/>
+
+	<!-- Google font API for fonts. -->
+	<link href='http://fonts.googleapis.com/css?family=Lobster' 
+		  rel='stylesheet' type='text/css'/>
+
+	<!-- Used so that Bootstrap can access what size the screen is. -->
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0"/>
+
+	<!-- For IE polyfills. -->
+	<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+
+	<!-- Specifying charset as part of HTML5 standard. -->
+	<meta charset="UTF-8"/>
+
+	<!-- This creates the icon for the website you see.
+		 NOTE: May not work if you're accessing on SAFE.-->
+	<link rel="shortcut icon" href="http://www.iconj.com/ico/5/s/5sf0ku54yh.ico" />
+
+	<!-- Polyfills for Internet Explorer. I included them to show I knew what they
+		 were and how they worked. However this site does not function well on IE. -->
+	<!--[if IE]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.js"></script>
+    <![endif]-->    
+
+	<title>About.</title>
+
+</head>
+
+<body>
+
+	<!-- Facebook root for page -->
+	<div id="fb-root"></div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- //////////////////// TOP NAVBAR DEFINITION ///////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<div class = "navbar navbar-inverse navbar-fixed-top">
+
+		<div class = "container">
+
+			<!-- Name to be displayed in top right. -->
+			<a href = "index.html" class = "navbar-brand">
+				J. Collerton
+			</a>
+
+			<!-- Used so that when the navbar compresses to a certain
+			level it becomes three lines that can be opened into a bigger
+			menu. -->
+			<button class = "navbar-toggle" 
+			 data-toggle = "collapse" 
+			 data-target = ".navHeaderCollapse">
+
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+
+			</button>
+
+			<!-- Definitions of links for Navbar. -->
+			<div class = "collapse navbar-collapse navHeaderCollapse">
+
+				<!-- Pulls the buttons to the right. -->
+				<ul class = "nav navbar-nav navbar-right">
+
+					<!-- Home button set to be on on the index page. -->
+					<li><a href = "home_page.html">Home</a></li>
+
+					<!-- Art gallery button. -->
+					<li><a href = "art_gallery.html">Art</a></li>
+
+					<!-- Creates a small dropdown section for the different
+					photography types. -->
+					<li class = "dropdown">
+
+						<a href = "#" class = "dropdown-toggle" 
+						   data-toggle = "dropdown">
+
+							Photography <b class = "caret"></b>
+
+						</a>
+
+						<!-- List of dropdown options. -->
+						<ul class = "dropdown-menu">
+
+							<li><a href = "photography_gallery.html">
+
+								Photography
+
+								<object data="icons/photography.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">PhotoSVG</object>
+
+							</a></li>
+
+							<li><a href = "models.html">
+
+								Models
+
+								<object data="icons/models.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">ModelsSVG</object>
+
+							</a></li>
+
+							<li><a href = "#">
+
+								Events
+
+								<object data="icons/events.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">EventsSVG</object>
+
+							</a></li>
+
+							<li><a href = "#">
+
+								Misc
+
+								<object data="icons/misc.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">MiscSVG</object>
+
+							</a></li>
+
+						</ul>
+
+					</li>
+
+					<!-- About section. -->
+					<li class ="active"><a href = "about.html">About</a></li>
+
+					<!-- User statistics section. -->
+					<li><a href = "user_stats.html">User Statistics</a></li>
+
+					<!-- Forum section. -->
+					<li><a href = "forum.html">Forum</a></li>
+
+				</ul> <!-- End of right buttons. -->
+
+			</div> <!-- End of navbar buttons. -->
+
+		</div> <!-- End of container. -->
+
+	</div> <!-- End of navbar. -->
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ////////////// END OF TOP NAVBAR DEFINITION  /////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<!-- Whitespace to stop the page flowing up over the top navigation bar. -->
+	<div class = "create_ws_ninety"></div>
+
+	<!-- Split the page into two, one side with the bouncing ball canvas
+		 one with the text. -->
+	<div class = "container">
+
+		<div class = "row">
+
+			<!-- Canvas here on LHS taking up a quarter of page. -->
+			<div class = "col-md-4">
+
+				<!-- Blank link so that the image displays link behaviours. -->
+				<a href="#" id="about_me_js">
+
+					<div class = "img_wrap_for_text_photo_gallery"
+						 id = "remove_img_wrap">
+
+						<canvas id="canvas"></canvas>
+
+						<p class = "img_title">About</p>
+
+					</div>
+
+				</a>
+
+			</div>
+
+			<!-- Information that appears when the ball is clicked. 
+				 This is the first two rows.-->
+			<div class = "col-md-8">
+
+				<div class = "row">
+
+					<div class = "col-md-6">
+
+						<div class = "invisible" id = "make_appear_1">
+
+							<div class = "create_ws_fifteen"></div>
+
+							<p class = "main_text text-right">
+
+								My name is James Collerton and I am a student at the University of Bristol, currently studying a Computer Science MSc. I graduated in 2014 from my BSc in Mathematics, where I mainly focused on statistics.
+
+								<br/><br/>
+
+								I am originally from Newcastle in the North East of England, so it's been interesting to move away for a few years!
+
+								<br/><br/>
+
+								When I am not fiddling with computers, solving equations or taking photos I enjoy cycling, kickboxing and going to the gym.
+
+							</p>
+
+						</div>
+
+					</div>
+
+					<!-- Second col in first row. -->
+					<div class = "col-md-6">
+
+						<div class = "invisible" id = "make_appear_2">
+
+							<img src="images/about_page/me_dog.png" 
+								 class="img-responsive center_image" 
+								 alt="me_and_dog"/>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- This is the second row of images/ text. -->
+				<div class = "create_ws_twenty_two"></div>
+
+				<div class = "row">
+
+					<div class = "col-md-6">
+
+						<div class = "create_ws_fifteen"></div>
+
+						<div class = "invisible" id = "make_appear_3">
+
+							<img src="images/about_page/me_bike.png" 
+								 class="img-responsive center_image" 
+								 alt="me_bike"/>
+
+						</div>
+
+					</div>
+
+					<div class = "col-md-6">
+
+						<div class = "invisible" id = "make_appear_4">
+
+							<div class = "create_ws_fifteen"></div>
+
+							<p class = "main_text">
+
+								I have been interested in photography of one form of another since I was a young teenager, but could never afford a decent camera until recently. Since I purchased my first one I have had the opportunity to do some really interesting things, including taking photos for UK number 1 artists, operas, events and bands.
+
+								<br/><br/>
+
+								Although I doubt it will ever become my profession, I still really enjoy it and hope to continue it on into the future as much I can.
+
+							</p>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<!-- Text and images underneath other information. -->
+				<div class = "invisible" id = "make_appear_5">
+
+					<div class = "create_ws_forty"></div>
+
+					<p class = "main_text">
+
+					Anyway, I hope you enjoyed looking at/ marking my site. I put a lot of time into how it looks and what it does. Especially making use of Bootstrap effectively. Thanks for visiting!
+
+					</p>
+
+				</div>
+
+				<div class = "invisible" id = "make_appear_6">
+
+					<div class = "create_ws_forty"></div>
+
+					<img src="images/about_page/me_fridge.png" 
+						 class="img-responsive center_image" 
+						 alt="sketch_2"/>
+
+				</div>
+
+			</div> <!-- End of second col. -->
+
+		</div> <!-- End of row. -->
+
+	</div> <!-- End of container. -->
+
+	<!-- Whitespace so bottom navbar does not spill over. -->
+	<div class = "create_ws_ninety"></div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ///////////////// BOTTOM NAVBAR DEFINITION ///////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<div class= "navbar navbar-inverse navbar-fixed-bottom">
+
+		<div class = "container">
+
+			<p class = "navbar-text pull-left">
+				J. Collerton: Art &amp; Photography
+			</p>
+
+			<!-- Creates the facebook share icon. -->
+			<div class="fb-share-button navbar-btn btn pull-right" 
+				 data-href="https://developers.facebook.com/docs/plugins/" 
+				 data-layout="button_count"></div>
+
+			<!-- Controls my email modal. -->
+			<a 
+			   class = "navbar-btn btn pull-right"
+			   id = "my_email_modal">
+			   Email Me
+			</a>
+
+			<!-- This toggles the pop up box for contacting. -->
+			<a href = "#contact" 
+			   data-toggle = "modal" 
+			   class = "navbar-btn btn pull-right">
+			   Contact Information
+			</a>
+
+		</div>
+
+	</div>
+
+	<!-- This contains all of the modal info for when we want to pop out. -->
+	<div class = "modal fade" id = "contact" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "mod_head">Contact Me
+
+						<object data="icons/contact.svg" type="image/svg+xml"
+								class = "modal_icon modal_icon_right">
+								ContactSVG
+						</object>
+
+					</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<p class = "mod_text">Phone: 07942-333-456<br/>
+					   Email: jc1175@my.bristol.ac.uk<br/>
+					   Website: You're here...<br/>
+					   Address: Flat 3, Mars, Space, A Galaxy Far, Far Away, 123 456<br/></p>
+
+					<div class = "create_ws_forty"></div>
+
+					<!-- Embedded google maps API. Please note when
+					marking this took quite a lot of time to get to work. -->
+					<iframe title = "embedded_google_map" 
+					src="https://www.google.com/maps/d/embed?mid=zPlYNMRlsqPw.kRRmejvbQabQ&amp;z=15&amp;ll=51.459847, -2.609405" 
+					width="100%" height="480"/>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div> <!-- End of modal content. -->
+
+		</div> <!-- End of modal dialogue. -->
+
+	</div> <!-- End of modal. -->
+
+	<!-- This holds all of the information for the email modal. -->
+	<div id = "email_modal_overlay">
+
+		<div id = "email_modal_inner">
+
+			<!-- Create a link so that a hand hovers over the X and users know
+				 it is a button. -->
+			<a href = "#" id = "close">
+
+				<div class = "email_modal_quit">
+
+						<object data="icons/quit.svg" type="image/svg+xml"
+								class = "email_modal_icon">
+								Exit
+						</object>
+
+				</div>
+
+			</a>
+
+			<h1 class = "mod_head">Email Me</h1>
+
+			<br/>
+
+			<!-- Start of email modal. -->
+
+			<!-- Feeds back to the server and sends an email. -->
+
+			<!-- Email address being sent to. -->
+			jc1175@my.bris.ac.uk
+
+			<!-- Their email address entry part. -->
+			<br/>
+
+			<label for = "sender_email" class = "email_label">Sender Email</label>
+
+			<br/>
+
+			<input id = "sender_email" type = "text" 
+				   placeholder = "Your email address." />
+
+			<br/>
+
+			<!-- The content of the email that they want to send. -->
+			<label for = "content" class = "email_label"> 
+				Content
+			</label>
+
+			<br/>
+
+			<textarea id = "content" cols = "40" rows = "10" 
+					  placeholder = "Your message"></textarea>
+
+			<br/><br/>
+
+			<!-- Send button. -->
+			<button id = "send_email" class = "send_btn">Send Email</button>
+
+			<br/><br/>
+
+			<!-- A small message that can be updated or changed depending on
+				 if the email sent or not. -->
+			<span id = "message" ></span>
+
+			<br/><br/>
+
+			<object data="icons/contact.svg" type="image/svg+xml"
+				    class = "send_modal_icon">
+				    EmailSVG
+			</object>
+
+			<div class = "create_ws_twenty_two"></div>
+
+		</div>
+
+	</div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ///////////////// END OF BOTTOM NAVBAR DEFINITION ////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<!-- Javascript and JQuery. -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+
+	<script src = "js/bootstrap.js"></script>
+	<script src = "js/about_button.js"></script>
+	<script src = "js/my_email_modal.js"></script>
+	<script src = "js/emailing_js.js"></script>
+	<script src = "js/stats_gathering.js"></script>
+	<script src = "js/facebook_share.js"></script>
+
+</body>
+
+</html>

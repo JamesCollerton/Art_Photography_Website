@@ -1,0 +1,71 @@
+/*Sets the scaling properties for the thumbnails in the image grid.
+the object properties prevent scaling and make sure it is centered.*/
+.body
+{
+	background-color: white;
+    font-family: 'Satisfy', cursive;
+    min-width: 600px;
+    min-height: 600px;
+}
+
+.thumbnail 
+{
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.thumbnail_container 
+{
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+}
+
+.thumbnail_image
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.name_box
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    text-align: center;
+}
+
+.menu {
+    position: fixed;
+    margin: 30px;
+    left: 55px;
+    top: 15%;
+    width: 10em;
+}
+
+.menu_header
+{
+    font-size: 200%;
+    padding: 3px;
+}
+
+.menu_link
+{
+    text-decoration: none;
+    padding: 3px;
+    color: rgb(0, 0, 0);
+    font-size: 175%
+}
+
+.image_grid_box {
+    position: relative;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    left: 280px;
+    width: 80%;
+}

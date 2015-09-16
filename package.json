@@ -1,0 +1,11 @@
+{
+"name": "email-node",
+"version": "1.0.0",
+"dependencies": {
+"nodemailer": "~1.0",
+"express": "~4.5.1",
+"socket.io":"~1.0",
+"validator":"~3.0",
+"sqlite3":"~3.0",
+}
+}

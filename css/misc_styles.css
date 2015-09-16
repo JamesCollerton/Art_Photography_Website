@@ -1,0 +1,32 @@
+/* Miscellaneous styles used over most pages. */
+
+/* Min height and width come from the email modal as that is the largest
+thing to fit on screen.*/
+body
+{
+	padding: 0; 
+	margin: 0; 
+	min-width: 600px; 
+	min-height: 800px
+}
+
+.center_image
+{
+	margin:0 auto;
+}
+
+.opening_panorama
+{
+  margin: 0px;
+  padding: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+/* These are to fix a bug in the fb-share button where it fails to resize. */
+
+.fb-share-button span,
+.fb-share-button iframe {
+    width: 120px! important;
+    height: 25px! important;
+}

@@ -1,0 +1,126 @@
+/* All font related CSS. */
+
+/* So that the google API font is used as default throughout the site.*/
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lobster', cursive;
+}
+p, div {
+    font-family: 'Lobster', cursive;
+}
+
+/* Various sizes and scales of fonts. */
+.home_page_title
+{
+	font-size: 40px;
+}
+
+.main_text
+{
+	font-size: 15px;
+}
+
+.main_page_title
+{
+	font-size: 80px;
+	text-align: center;
+}
+
+.main_page_font
+{
+	font-size: 20px;
+	text-align: center;
+}
+
+.carousel_font
+{
+	font-size: 30px;
+}
+
+.art_page_title
+{
+	font-size: 50px;
+}
+
+.tab_header
+{
+	font-size: 30px;
+}
+
+.mod_text
+{
+	font-size: 15px;
+}
+
+.forum_intro_text
+{
+  font-size: 30px;
+}
+
+.mod_header
+{
+	font-size: 30px;
+}
+
+/* Used so the background of the opening panorama is not blank text.
+The transform part is so that we consider the image center. */
+.panorama_text_background
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 30px;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color:rgba(0,0,0,0.5);
+}
+
+.panorama_title_text
+{
+  font-size: 80px;
+}
+
+.panorama_body_text
+{
+  font-size: 50px;
+}
+
+.panorama_link_text
+{
+  color: white;
+  font-size: 30px;
+}
+
+.modal_text
+{
+  text-align: center;
+}
+
+/* Used here so that in there is no underline on links. 
+This is mainly for Safari's benefit.*/
+a:link
+{
+    text-decoration: none;
+}
+
+.user_stats_title
+{
+  font-size: 50px;
+}
+
+.user_stats_subtitle
+{
+  font-size: 30px;
+}
+
+.user_stats_button
+{
+  visibility: hidden;
+  margin-left: 60px;
+}
+
+.stats_lab
+{
+  font-size: 20px;
+  margin-left: 10px;
+}

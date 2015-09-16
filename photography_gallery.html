@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+
+<!-- Declares the necessary HTML5 type. -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang ="en-GB" xml:lang="en-GB">
+
+<head>
+
+	<!-- NOTE: JS script links are contained at the bottom of the page for
+	faster loading. -->
+
+	<!-- Linked stylesheets -->
+	<!-- Note the first one is to normalize the css across browsers. -->
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/whitespace_styles.css"/>
+	<link rel="stylesheet" href="css/fade_functions.css"/>
+	<link rel="stylesheet" href="css/text_on_img.css"/>
+	<link rel="stylesheet" href="css/fonts.css"/>
+	<link rel="stylesheet" href="css/icon.css"/>
+	<link rel="stylesheet" href="css/misc_styles.css"/>
+	<link rel="stylesheet" href="css/my_email_modal.css"/>
+
+	<!-- Google font API for fonts. -->
+	<link href='http://fonts.googleapis.com/css?family=Lobster' 
+		  rel='stylesheet' type='text/css'/>
+
+	<!-- Used so that Bootstrap can access what size the screen is. -->
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0"/>
+
+	<!-- For IE polyfills. -->
+	<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+
+	<!-- Specifying charset as part of HTML5 standard. -->
+	<meta charset="UTF-8"/>
+
+	<!-- This creates the icon for the website you see.
+		 NOTE: May not work if you're accessing on SAFE.-->
+	<link rel="shortcut icon" href="http://www.iconj.com/ico/5/s/5sf0ku54yh.ico" />
+
+	<!-- Polyfills for Internet Explorer. I included them to show I knew what they
+		 were and how they worked. However this site does not function well on IE. -->
+	<!--[if IE]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.js"></script>
+    <![endif]-->    
+
+	<title>Photography Gallery.</title>
+
+</head>
+
+<body>
+
+	<!-- Facebook root for page -->
+	<div id="fb-root"></div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- //////////////////// TOP NAVBAR DEFINITION ///////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<div class = "navbar navbar-inverse navbar-fixed-top">
+
+		<div class = "container">
+
+			<!-- Name to be displayed in top right. -->
+			<a href = "index.html" class = "navbar-brand">
+				J. Collerton
+			</a>
+
+			<!-- Used so that when the navbar compresses to a certain
+			level it becomes three lines that can be opened into a bigger
+			menu. -->
+			<button class = "navbar-toggle" 
+			 data-toggle = "collapse" 
+			 data-target = ".navHeaderCollapse">
+
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+
+			</button>
+
+			<!-- Definitions of links for Navbar. -->
+			<div class = "collapse navbar-collapse navHeaderCollapse">
+
+				<!-- Pulls the buttons to the right. -->
+				<ul class = "nav navbar-nav navbar-right">
+
+					<!-- Home button set to be on on the index page. -->
+					<li><a href = "home_page.html">Home</a></li>
+
+					<!-- Art gallery button. -->
+					<li><a href = "art_gallery.html">Art</a></li>
+
+					<!-- Creates a small dropdown section for the different
+					photography types. -->
+					<li class = "active dropdown">
+
+						<a href = "#" class = "dropdown-toggle" 
+						   data-toggle = "dropdown">
+
+							Photography <b class = "caret"></b>
+
+						</a>
+
+						<!-- List of dropdown options. -->
+						<ul class = "dropdown-menu">
+
+							<li><a href = "photography_gallery.html">
+
+								Photography
+
+								<object data="icons/photography.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">PhotoSVG</object>
+
+							</a></li>
+
+							<li><a href = "models.html">
+
+								Models
+
+								<object data="icons/models.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">ModelsSVG</object>
+
+							</a></li>
+
+							<li><a href = "#">
+
+								Events
+
+								<object data="icons/events.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">EventsSVG</object>
+
+							</a></li>
+
+							<li><a href = "#">
+
+								Misc
+
+								<object data="icons/misc.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">MiscSVG</object>
+
+							</a></li>
+
+						</ul>
+
+					</li>
+
+					<!-- About section. -->
+					<li><a href = "about.html">About</a></li>
+
+					<!-- User statistics section. -->
+					<li><a href = "user_stats.html">User Statistics</a></li>
+
+					<!-- Forum section. -->
+					<li><a href = "forum.html">Forum</a></li>
+
+				</ul> <!-- End of right buttons. -->
+
+			</div> <!-- End of navbar buttons. -->
+
+		</div> <!-- End of container. -->
+
+	</div> <!-- End of navbar. -->
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ////////////// END OF TOP NAVBAR DEFINITION  /////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<div class = "create_ws_ninety"></div>
+
+	<!-- Start of the container for the image carousel. -->
+	<div class = "container">
+
+		<div id="photography_carousel" class="carousel slide" data-ride="carousel">
+			
+			<!-- Indicators, specify the target, the end slide and where to start -->
+			<ol class="carousel-indicators">
+			<li data-target="#photography_carousel" data-slide-to="0" class="active"></li>
+			<li data-target="#photography_carousel" data-slide-to="1"></li>
+			<li data-target="#photography_carousel" data-slide-to="2"></li>
+			</ol>
+
+			<!-- Wrapper for slides and list of images on slides and captions. -->
+			<div class="carousel-inner">
+
+				<!-- Starting item so active. -->
+				<div class="item active">
+
+			  		<img src="images/photography_page/carousel/boy_and_his_dog_carousel.png" 
+			  			 alt="pic_of_boy_and_dog"/>
+			  		
+			  		<div class="carousel-caption">
+			      		<h1 class = "carousel_font">A Boy and his Dog</h1>
+			  		</div>
+
+				</div>
+
+				<!-- Next item. -->
+				<div class="item">
+
+				  <img src="images/photography_page/carousel/the_boss.png" 
+				  	   alt="pic_of_frog"/>
+
+				  <div class="carousel-caption">
+				      <h1 class = "carousel_font">The Boss</h1>
+				  </div>
+
+				</div>
+
+				<!-- Next item. -->
+				<div class="item">
+
+			  		<img src="images/photography_page/carousel/bristol_cathedral.png" 
+			  			 alt="pic_of_cathedral"/>
+
+			  		<div class="carousel-caption">
+			      		<h1 class = "carousel_font">Bristol Cathedral</h1>
+			  		</div>
+
+				</div>
+
+			</div> <!-- End of carousel inner. -->
+
+			<!-- Controls -->
+			<a class="left carousel-control" href="#photography_carousel" 
+				role="button" data-slide="prev">
+
+				<object data="icons/left.svg" type="image/svg+xml"
+						class = "carousel_icon">LeftSVG</object>
+
+			</a>
+
+			<a class="right carousel-control" href="#photography_carousel" 
+			   role="button" data-slide="next">
+
+			   <object data="icons/right.svg" type="image/svg+xml"
+						class = "carousel_icon">RightSVG</object>
+
+			</a>
+
+		</div> <!-- End of carousel. -->
+
+	</div> <!-- End of container. -->
+
+	<div class = "create_ws_twenty"></div>
+
+	<!-- Small middle part of the page for the welcome and description -->
+	<div class = "container">
+
+			<h1 class = "main_page_title">Photography.</h1>
+
+			<p class = "main_page_font">Welcome to my photography page! Here you will find a selection of photos you can trawl through at your leisure. There should be a bit of everything here, but you can use the navigation bar at the top to refine what you would like to look at.</p>
+
+	</div>
+
+	<!-- Start of image gallery. -->
+	<div class = "create_ws_forty"></div>
+
+	<div class = "container">
+
+		<div class = "row">
+
+			<!-- Charlotte image. -->
+			<div class = "col-md-4">
+
+					<!-- Each picture toggles a modal so you can blow it up and
+					read a bit more about it. -->
+					<a href = "#charlotte" data-toggle = "modal" class = "remove_underline">
+
+						<div class = "img_wrap_for_text_photo_gallery center_image">
+
+							<img src="images/photography_page/thumbnails/charlotte.png" 
+								 class="img-responsive" 
+								 alt="charlotte_pic"/>
+
+							<p class = "img_title">Charlotte</p>
+
+						</div>
+
+					</a>
+
+				</div>
+
+			<!-- Bike image. -->
+			<div class = "col-md-4">
+
+					<a href = "#new_wheels" data-toggle = "modal" class = "remove_underline">
+
+						<div class = "img_wrap_for_text_photo_gallery center_image">
+
+							<img src="images/photography_page/thumbnails/my_bike.png" 
+							     class="img-responsive" 
+							     alt="my_bike"/>
+
+							<p class = "img_title">New Wheels</p>
+
+						</div>
+
+					</a>
+
+			</div>
+
+			<!-- Red Bull image. -->
+			<div class = "col-md-4 vcenter">
+
+				<a href = "#red_bull" data-toggle = "modal" class = "remove_underline">
+
+					<div class = "img_wrap_for_text_photo_gallery center_image">
+
+						<img src="images/photography_page/thumbnails/red_bull.png" 
+						     class="img-responsive" 
+						     alt="red_bull_img"/>
+
+						<p class = "img_title">Red Bull</p>
+
+					</div>
+
+				</a>
+
+			</div>
+
+		</div> 		<!-- End of row. -->
+
+	</div> 		<!-- End of container. -->
+
+	<div class = "create_ws_forty"></div>
+
+	<!-- Start of next row of images. -->
+	<div class = "container">
+
+		<div class = "row">
+
+			<!-- Start of bike badge image. -->
+			<div class = "col-md-4">
+
+					<a href = "#bike_badge" data-toggle = "modal" class = "remove_underline">
+
+						<div class = "img_wrap_for_text_photo_gallery center_image">
+
+							<img src="images/photography_page/thumbnails/bike_badge.png" 
+							 	 class="img-responsive" 
+							 	 alt="bike_badge_img"/>
+
+							<p class = "img_title">Bike Badge</p>
+
+						</div>
+
+					</a>
+
+				</div>
+
+			<!-- Start of sunny day image. -->
+			<div class = "col-md-4">
+
+					<a href = "#sunny_day" data-toggle = "modal" class = "remove_underline">
+
+						<div class = "img_wrap_for_text_photo_gallery center_image">
+
+							<img src="images/photography_page/thumbnails/sunny_day.png" 
+								 class="img-responsive" 
+								 alt="sunny_day_img"/>
+
+							<p class = "img_title">Sunny Day</p>
+
+						</div>
+
+					</a>
+
+			</div>
+
+			<!-- Start of lighthouse image. -->
+			<div class = "col-md-4 vcenter">
+
+				<a href = "#lighthouse" data-toggle = "modal" class = "remove_underline">
+
+					<div class = "img_wrap_for_text_photo_gallery center_image">
+
+						<img src="images/photography_page/thumbnails/lighthouse.png" 
+							 class="img-responsive" 
+							 alt="lighthouse_img"/>
+
+						<p class = "img_title">Lighthouse</p>
+
+					</div>
+
+				</a>
+
+			</div>
+
+		</div> <!-- End of row. -->
+
+	</div> <!-- End of container. -->
+
+	<div class = "create_ws_ninety"></div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ///////////////// BOTTOM NAVBAR DEFINITION ///////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<div class= "navbar navbar-inverse navbar-fixed-bottom">
+
+		<div class = "container">
+
+			<p class = "navbar-text pull-left">
+				J. Collerton: Art &amp; Photography
+			</p>
+
+			<!-- Creates the facebook share icon. -->
+			<div class="fb-share-button navbar-btn btn pull-right" 
+				 data-href="https://developers.facebook.com/docs/plugins/" 
+				 data-layout="button_count"></div>
+
+			<a class = "navbar-btn btn pull-right"
+			   id = "my_email_modal">
+			   	Email Me
+			</a>
+
+			<div id="email_modal_content"></div>
+
+			<!-- This toggles the pop up box for contacting. -->
+			<a href = "#contact" 
+			   data-toggle = "modal" 
+			   class = "navbar-btn btn pull-right">
+			   Contact Information
+			</a>
+
+		</div>
+
+	</div>
+
+	<!-- This contains all of the modal info for when we want to pop out. -->
+	<div class = "modal fade" id = "contact" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "mod_head">Contact Me
+
+						<object data="icons/contact.svg" type="image/svg+xml"
+								class = "modal_icon modal_icon_right">
+								ContactSVG
+						</object>
+
+					</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<p class = "mod_text">Phone: 07942-333-456<br/>
+					   Email: jc1175@my.bristol.ac.uk<br/>
+					   Website: You're here...<br/>
+					   Address: Flat 3, Mars, Space, A Galaxy Far, Far Away, 123 456<br/></p>
+
+					<div class = "create_ws_forty"></div>
+
+					<!-- Embedded google maps API. Please note when
+					marking this took quite a lot of time to get to work. -->
+					<iframe title = "embedded_google_map" 
+					src="https://www.google.com/maps/d/embed?mid=zPlYNMRlsqPw.kRRmejvbQabQ&amp;z=15&amp;ll=51.459847, -2.609405" 
+					width="100%" height="480"/>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div> <!-- End of modal content. -->
+
+		</div> <!-- End of modal dialogue. -->
+
+	</div> <!-- End of modal. -->
+
+	<!-- This holds all of the information for the email modal. -->
+	<div id = "email_modal_overlay">
+
+		<div id = "email_modal_inner">
+
+			<!-- Create a link so that a hand hovers over the X and users know
+				 it is a button. -->
+			<a href = "#" id = "close">
+
+				<div class = "email_modal_quit">
+
+						<object data="icons/quit.svg" type="image/svg+xml"
+								class = "email_modal_icon">
+								Exit
+						</object>
+
+				</div>
+
+			</a>
+
+			<h1 class = "mod_head">Email Me</h1>
+
+			<br/>
+
+			<!-- Start of email modal. -->
+
+			<!-- Feeds back to the server and sends an email. -->
+
+			<!-- Email address being sent to. -->
+			jc1175@my.bris.ac.uk
+
+			<!-- Their email address entry part. -->
+			<br/>
+
+			<label for = "sender_email" class = "email_label">Sender Email</label>
+
+			<br/>
+
+			<input id = "sender_email" type = "text" 
+				   placeholder = "Your email address." />
+
+			<br/>
+
+			<!-- The content of the email that they want to send. -->
+			<label for = "content" class = "email_label"> 
+				Content
+			</label>
+
+			<br/>
+
+			<textarea id = "content" cols = "40" rows = "10" 
+					  placeholder = "Your message"></textarea>
+
+			<br/><br/>
+
+			<!-- Send button. -->
+			<button id = "send_email" class = "send_btn">Send Email</button>
+
+			<br/><br/>
+
+			<!-- A small message that can be updated or changed depending on
+				 if the email sent or not. -->
+			<span id = "message" ></span>
+
+			<br/><br/>
+
+			<object data="icons/contact.svg" type="image/svg+xml"
+				    class = "send_modal_icon">
+				    EmailSVG
+			</object>
+
+			<div class = "create_ws_twenty_five"></div>
+
+		</div>
+
+	</div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ///////////////// END OF BOTTOM NAVBAR DEFINITION ////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<!-- Each modal is defined fairly similarly. This one is
+	called by the Charlotte ID. -->
+	<div class = "modal fade" id = "charlotte" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "modal_text">Charlotte</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<img src="images/photography_page/large_images/hq_charlotte.png" 
+						 class="img-responsive" 
+						 alt="hq_charlotte_img"/>
+
+					<div class = "create_ws_forty"></div>
+
+					<p class = "modal_text">This is a picture of my girlfriend, Charlotte. It was taken on the train from Bristol to London. Personally I like the rain on the window and the soft light.</p>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Start of New Wheels modal. -->
+	<div class = "modal fade" id = "new_wheels" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "modal_text">New Wheels</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<img src="images/photography_page/large_images/hq_new_wheels.png" 
+						 class="img-responsive" alt="hq_new_wheels_img"/>
+
+					<div class = "create_ws_forty"></div>
+
+					<p class = "modal_text">For my 21st birthday my parents helped me pay for parts to refurbish my dad's old bike. I put on new wheels, tyres, brakes and gears and made this. It was interesting to try using my hands for a bit, as well as my head. When I have time I like cycling, hopefully I'll have a bit more time for it after I'm done!</p>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Start of Red Bull modal. -->
+	<div class = "modal fade" id = "red_bull" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "modal_text">Red Bull</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<img src="images/photography_page/large_images/hq_red_bull.png" 
+					     class="img-responsive" alt="hq_red_bull_img"/>
+
+					<div class = "create_ws_forty"></div>
+
+					<p class = "modal_text">When some friends of mine threw a Red Bull sponsored event I was lucky enough to be asked to do the photography. Not really having done much event photography before I thought it would be interesting to have a go. Definitely learnt a lot from the experience!</p>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Start of Bike Badge modal. -->
+	<div class = "modal fade" id = "bike_badge" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "modal_text">Bike Badge</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<img src="images/photography_page/large_images/hq_bike_badge.png" 
+						 class="img-responsive" 
+						 alt="hq_bike_badge_img"/>
+
+					<div class = "create_ws_forty"></div>
+
+					<p class = "modal_text">As part of putting together my new bike for my 21st I got a custom headbadge for it. Not sure if it's readable, but you can see my date of birth, name and age on it.</p>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Start of Sunny Day modal. -->
+	<div class = "modal fade" id = "sunny_day" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "modal_text">Sunny Day</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<img src="images/photography_page/large_images/hq_sunny_day.png" 
+						 class="img-responsive" alt="hq_sunny_day_img"/>
+
+					<div class = "create_ws_forty"></div>
+
+					<p class = "modal_text">I worked at a software firm called Sparx over summer and they took us PowerKiting. It was a good laugh, but quite hard!</p>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Start of Lighthouse modal. -->
+	<div class = "modal fade" id = "lighthouse" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "modal_text">Lighthouse</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<img src="images/photography_page/large_images/hq_lighthouse.png" 
+					 	 class="img-responsive" alt="hq_lighthouse_img"/>
+
+					<div class = "create_ws_forty"></div>
+
+					<p class = "modal_text">This lighthouse is near where I live in Newcastle. I think I took this over summer when I was back home. It's quite a nice area of the city but I don't get to go there much which is a shame.</p>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<!-- Javascript and JQuery. -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+
+	<script src = "js/bootstrap.js"></script>
+	<script src = "js/my_email_modal.js"></script>
+	<script src = "js/emailing_js.js"></script>
+	<script src = "js/stats_gathering.js"></script>
+	<script src = "js/facebook_share.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+
+<!-- Declares the necessary HTML5 type. -->
+<html xmlns="http://www.w3.org/1999/xhtml" lang ="en-GB" xml:lang="en-GB">
+
+<head>
+
+	<!-- NOTE: JS script links are contained at the bottom of the page for
+	faster loading. -->
+
+	<!-- Linked stylesheets -->
+	<!-- Note the first one is to normalize the css across browsers. -->
+	<link rel="stylesheet" href="css/normalize.css"/>
+	<link rel="stylesheet" href="css/bootstrap.css"/>
+	<link rel="stylesheet" href="css/whitespace_styles.css"/>
+	<link rel="stylesheet" href="css/fade_functions.css"/>
+	<link rel="stylesheet" href="css/text_on_img.css"/>
+	<link rel="stylesheet" href="css/fonts.css"/>
+	<link rel="stylesheet" href="css/icon.css"/>
+	<link rel="stylesheet" href="css/misc_styles.css"/>
+	<link rel="stylesheet" href="css/my_email_modal.css"/>
+
+	<!-- Google font API for fonts. -->
+	<link href='http://fonts.googleapis.com/css?family=Lobster' 
+		  rel='stylesheet' type='text/css'/>
+
+	<!-- Used so that Bootstrap can access what size the screen is. -->
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0"/>
+
+	<!-- For IE polyfills. -->
+	<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+
+	<!-- Specifying charset as part of HTML5 standard. -->
+	<meta charset="UTF-8"/>
+
+	<!-- This creates the icon for the website you see.
+		 NOTE: May not work if you're accessing on SAFE.-->
+	<link rel="shortcut icon" href="http://www.iconj.com/ico/5/s/5sf0ku54yh.ico" />
+
+	<!-- Polyfills for Internet Explorer. I included them to show I knew what they
+		 were and how they worked. However this site does not function well on IE. -->
+	<!--[if IE]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.js"></script>
+    <![endif]-->    
+
+	<title>Art Gallery.</title>
+
+</head>
+
+<body>
+
+	<!-- Facebook root for page -->
+	<div id="fb-root"></div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- //////////////////// TOP NAVBAR DEFINITION ///////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<div class = "navbar navbar-inverse navbar-fixed-top">
+		<div class = "container">
+
+			<!-- Name to be displayed in top right. -->
+			<a href = "index.html" class = "navbar-brand">
+				J. Collerton
+			</a>
+
+			<!-- Used so that when the navbar compresses to a certain
+			level it becomes three lines that can be opened into a bigger
+			menu. -->
+			<button class = "navbar-toggle" 
+			 data-toggle = "collapse" 
+			 data-target = ".navHeaderCollapse">
+
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+				<span class = "icon-bar"></span>
+
+			</button>
+
+			<!-- Definitions of links for Navbar. -->
+			<div class = "collapse navbar-collapse navHeaderCollapse">
+
+				<!-- Pulls the buttons to the right. -->
+				<ul class = "nav navbar-nav navbar-right">
+
+					<!-- Home button set to be on on the index page. -->
+					<li><a href = "home_page.html">Home</a></li>
+
+					<!-- Art gallery button. -->
+					<li class ="active"><a href = "art_gallery.html">Art</a></li>
+
+					<!-- Creates a small dropdown section for the different
+					photography types. -->
+					<li class = "dropdown">
+
+						<a href = "#" class = "dropdown-toggle" 
+						   data-toggle = "dropdown">
+
+							Photography <b class = "caret"></b>
+
+						</a>
+
+						<!-- List of dropdown options. -->
+						<ul class = "dropdown-menu">
+
+							<li><a href = "photography_gallery.html">
+
+								Photography
+
+								<object data="icons/photography.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">PhotoSVG</object>
+
+							</a></li>
+
+							<li><a href = "models.html">
+
+								Models
+
+								<object data="icons/models.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">ModelsSVG</object>
+
+							</a></li>
+
+							<li><a href = "#">
+
+								Events
+
+								<object data="icons/events.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">EventsSVG</object>
+
+							</a></li>
+
+							<li><a href = "#">
+
+								Misc
+
+								<object data="icons/misc.svg" type="image/svg+xml"
+								class = "tiny_icon menu_icon_right">MiscSVG</object>
+
+							</a></li>
+
+						</ul>
+
+					</li>
+
+					<!-- About section. -->
+					<li><a href = "about.html">About</a></li>
+
+					<!-- User statistics section. -->
+					<li><a href = "user_stats.html">User Statistics</a></li>
+
+					<!-- Forum section. -->
+					<li><a href = "forum.html">Forum</a></li>
+
+				</ul> <!-- End of right buttons. -->
+
+			</div> <!-- End of navbar buttons. -->
+
+		</div> <!-- End of container. -->
+
+	</div> <!-- End of navbar. -->
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ////////////// END OF TOP NAVBAR DEFINITION  /////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<!-- Whitespace for where the top navbar usually goes. -->
+	<div class = "create_ws_sixty"></div>
+
+	<!-- Container for the whole page. -->
+	<div class = "container">
+
+		<div class = "row">
+
+			<!-- Columns set to width six so we have two equal ones. -->
+			<div class = "col-sm-6">
+
+				<!-- Split the page again so we can have cols for the 
+				title and for the icon. -->
+				<div class = "row">
+
+					<div class = "col-sm-3">
+
+						<h1 class = "art_page_title">Art</h1>
+
+					</div>
+
+					<div class = "col-sm-9">
+
+						<div class = "create_ws_twenty_five"></div>
+
+						<object data="icons/art.svg" type="image/svg+xml"
+								class = "icon">
+							Art Icon
+						</object>
+
+					</div>
+
+				</div>
+
+				<div class = "create_ws_forty"></div>
+
+					<!-- Start of the tabbable content. -->
+					<div class = "tabbable">
+
+						<!-- These define the different tabs we have. Note that
+						the landing one is set to active. -->
+						<ul class = "nav nav-tabs">
+
+							<li class = "active"><a href = "#tab_1" data-toggle = "tab">Other</a></li>
+							<li><a href = "#tab_2" data-toggle = "tab">Pen</a></li>
+							<li><a href = "#tab_3" data-toggle = "tab">Sketches</a></li>
+
+						</ul>
+
+						<!-- These provide the links to the areas which 
+						contain the tabbed content. -->
+						<div class = "tab-content">
+
+							<!-- Tab 1 content. -->
+							<div class = "tab-pane active" id = "tab_1">
+
+								<div class = "create_ws_forty"></div>
+
+								<!-- Split the grid again to have space for
+									 the title and picture. -->
+								<div class = "row">
+
+									<div class = "col-sm-2">
+
+										<h1 class = "tab_header">Other</h1>
+
+									</div>
+
+									<div class = "col-sm-10">
+
+										<div class = "create_ws_twenty_five"></div>
+
+										<object data="icons/art.svg" type="image/svg+xml"
+												class = "small_icon">
+											Art Icon
+										</object>
+
+									</div>
+
+								</div>
+
+								<div class = "create_ws_forty"></div>
+
+								<!-- Create a grid within a grid to have the 
+								picture and text side by side. -->
+								<div class = "row">
+
+									<div class = "col-sm-6">
+
+										<p class = "main_text">I've tried a few different other mediums including paint, charcoal, computer, watercolour and pastel, but never with much success.
+
+										<br/><br/>
+
+										However, having said that, this is one of my favourite things I've ever done. It's a copy of a self portrait by a German artist
+
+										<!-- Defining a small popover box to give more info on the artist. -->
+										<a data-container = "body" data-toggle = "popover" data-placement = "right" 
+
+										data-content = "The only artist I actually know anything about. If you have time I would really recommend checking out some of his other work!">
+
+											Tai Shan Schierenberg
+
+										</a>
+
+										. It took about twenty hours and I did it when I was seventeen.
+
+										<br/><br/>
+
+										Once I've settled down a bit I think I will definitely start to pick up my paintbrush a little more. I also should learn to use a few more implements than just pen and pencil, so maybe I will try watercolours as well.</p>
+
+									</div>
+
+									<!-- This other half of the grid is an image. -->
+									<div class = "col-sm-6">
+											
+										<img src="images/art_page/painting.png" 
+										     class="img-responsive center_image" 
+										     alt="painting_pic"/>
+
+									</div>
+
+								</div> <!-- End of row. -->
+
+							</div> <!-- End of tab pane. -->
+
+							<!-- Tab 2 -->
+							<div class = "tab-pane" id = "tab_2">
+
+								<div class = "create_ws_forty"></div>
+
+								<div class = "row">
+
+									<div class = "col-sm-2">
+
+										<h1 class = "tab_header">Pen</h1>
+
+									</div>
+
+									<div class = "col-sm-10">
+
+										<div class = "create_ws_twenty_five"></div>
+
+										<object data="icons/pen.svg" type="image/svg+xml"
+												class = "small_icon">
+											Pen Icon
+										</object>
+
+									</div>
+
+								</div>
+
+								<div class = "create_ws_forty"></div>
+
+								<p class = "main_text">As I've spoken about in the introduction, I mainly use pen and paper. Although I let my art slide for a little bit in my first year of uni I tried to find more time in the holidays of second and third year.
+
+								<br/><br/>
+
+								I have a
+
+								<a data-container = "body" data-toggle = "popover" 
+								   data-placement = "right" 
+								   data-content = "There are more images from it on the sketches
+								   				   page.">
+
+									small sketchbook on my desk
+
+								</a> 
+
+								I try to use when I can, but I struggle quite a lot of the time, especially after starting my Master's.
+
+								</p>
+
+								<div class = "create_ws_forty"></div>
+
+								<!-- Create grid under text to display three more images. -->
+								<div class = "row">
+
+										<div class = "col-sm-4">
+
+											<img src="images/art_page/superman.png" 
+												 class="img-responsive center_image" 
+												 alt="superman"/>
+
+										</div>
+
+										<div class = "col-sm-4">
+												<img src="images/art_page/ink_girl_1.png" 
+												     class="img-responsive center_image" 
+												     alt="ink_girl_1"/>
+										</div>
+
+										<div class = "col-sm-4">
+												<img src="images/art_page/ink_girl_2.png" 
+												     class="img-responsive center_image" 
+												     alt="ink_girl_2"/>
+										</div>
+
+									</div> <!-- End of row. -->
+
+							</div> <!-- End of tab pane. -->
+
+						<!-- Tab 3 -->
+						<div class = "tab-pane" id = "tab_3">
+
+							<div class = "row">
+
+								<div class = "create_ws_forty"></div>
+
+								<!-- Create a grid to have the title on one side
+									 and icon on the other. -->
+								<div class = "row">
+
+									<div class = "col-sm-3">
+
+										<h1 class = "tab_header">Sketches</h1>
+
+									</div>
+
+									<div class = "col-sm-9">
+
+										<div class = "create_ws_twenty_five"></div>
+
+										<object data="icons/sketch.svg" type="image/svg+xml"
+												class = "small_icon">
+											Art Icon
+										</object>
+
+									</div>
+
+								</div>
+
+								<div class = "create_ws_forty"></div>
+
+								<!-- Creates grid for images and text. -->
+								<div class = "row">
+
+									<div class = "col-sm-4">
+
+										<img src="images/art_page/lucy_liu.png" 
+											 class="img-responsive center_image" 
+											 alt="lucy_liu"/>
+
+									</div>
+
+									<div class = "col-sm-8 text-right">
+												
+											<p class = "main_text">When I was in school the only part of art I was ever half good at was sketching. I'd like to spend some time improving at some point, but it is very time consuming.
+
+											<br/><br/>
+
+											On the left is a sketch I did of the actress Lucy Liu last summer. Again I stuck to black and white rather than colour as it's a little bit easier!
+
+											<br/><br/>
+
+											In the past I tended to stick to pencil drawings of comic book characters as I liked the look of them and they were easier. I think that this was my first attempt at drawing a real person. It's still come out a little comic-esque but I don't think it's terrible for a first attempt.</p>
+
+											<div class = "create_ws_forty"></div>
+
+											<div class = "row">
+
+												<div class = "col-sm-4">
+
+													<img src="images/art_page/sketch_1.png" 
+														 class="img-responsive center_image" 
+														 alt="sketch_1"/>
+
+												</div>
+
+												<div class = "col-sm-4">
+
+													<img src="images/art_page/sketch_2.png" 
+														 class="img-responsive center_image" 
+														 alt="sketch_2"/>
+
+												</div>
+
+												<div class = "col-sm-4">
+
+													<img src="images/art_page/sketch_3.png" 
+													   	 class="img-responsive center_image" 
+													   	 alt="sketch_3"/>
+
+												</div>
+
+											</div>
+
+									</div> <!-- End of col divider. -->
+
+								</div> <!-- End of inner row. -->
+
+							</div> <!-- End of outer row. -->
+
+						</div> <!-- End of tab pane. -->
+
+					</div> <!-- End of tab content. -->
+
+				</div> <!-- End of tabbable. -->
+
+			</div> <!-- End of row. -->
+
+			<!-- This makes up the rest of the page (on the right hand side). -->
+			<div class = "col-sm-5 col-md-offset-1">
+
+				<h1 class = "text-right art_page_title">Introduction</h1>
+
+				<div class = "create_ws_forty"></div>
+
+				<p class = "main_text">I've always quite enjoyed art and tried to make time for it when I can. I've never really studied it properly because I was always more interested in the sciences, however it would be nice to maybe do classes in the future.
+
+				<br/><br/>
+
+				Mainly I do
+
+				<a data-container = "body" data-toggle = "popover" data-placement = "left" 
+				   data-content = "Which you can check out in the pen tab over the page!">
+
+					black and white pen and ink drawings 
+
+				</a> 
+
+				as they are less of a commitment than painting or anything similar to that. However I have dabbled in a couple of different things and you can look at them using the tabs on the left of the page.
+
+				<br/><br/>
+
+				Anyway, I hope you enjoy looking through some of my stuff!</p>
+
+				<div class = "create_ws_forty"></div>
+
+				<img src="images/art_page/hugo.png" 
+					 class="img-responsive center_image" 
+					 alt="hugo"/>
+
+			</div> <!-- End of col. -->
+
+		</div> <!-- End of row. -->
+
+	</div> <!-- End of container. -->
+
+	<div class = "create_ws_sixty"></div>
+
+	<!-- Bottom graphic. -->
+	<div class = "container">
+
+		<div class="widewrapper main">
+
+      		<img src="images/art_page/footer.png" 
+      		     class="img-responsive" 
+      		     alt="footer_img"/>
+
+		</div>
+
+	</div>
+
+	<!-- Whitespace where the menu can lie when we have scrolled down. -->
+	<div class = "create_ws_ninety"></div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ///////////////// BOTTOM NAVBAR DEFINITION ///////////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<div class= "navbar navbar-inverse navbar-fixed-bottom">
+
+		<div class = "container">
+
+			<p class = "navbar-text pull-left">
+				J. Collerton: Art &amp; Photography
+			</p>
+
+			<!-- Creates the facebook share icon. -->
+			<div class="fb-share-button navbar-btn btn pull-right" 
+				 data-href="https://developers.facebook.com/docs/plugins/" 
+				 data-layout="button_count"></div>
+
+			<a 
+			   class = "navbar-btn btn pull-right"
+			   id = "my_email_modal">
+			   Email Me
+			</a>
+
+			<!-- This toggles the pop up box for contacting. -->
+			<a href = "#contact" 
+			   data-toggle = "modal" 
+			   class = "navbar-btn btn pull-right">
+			   Contact Information
+			</a>
+
+		</div>
+
+	</div>
+
+	<!-- This contains all of the modal info for when we want to pop out. -->
+	<div class = "modal fade" id = "contact" role = "dialog">
+
+		<div class = "modal-dialog">
+
+			<div class = "modal-content">
+
+				<div class = "modal-header">
+
+					<h1 class = "mod_head">Contact Me
+
+						<object data="icons/contact.svg" type="image/svg+xml"
+								class = "modal_icon modal_icon_right">
+								ContactSVG
+						</object>
+
+					</h1>
+
+				</div>
+
+				<div class = "modal-body">
+
+					<p class = "mod_text">Phone: 07942-333-456<br/>
+					   Email: jc1175@my.bristol.ac.uk<br/>
+					   Website: You're here...<br/>
+					   Address: Flat 3, Mars, Space, A Galaxy Far, Far Away, 123 456<br/></p>
+
+					<div class = "create_ws_forty"></div>
+
+					<!-- Embedded google maps API. Please note when
+					marking this took quite a lot of time to get to work. -->
+					<iframe title = "embedded_google_map" 
+					src="https://www.google.com/maps/d/embed?mid=zPlYNMRlsqPw.kRRmejvbQabQ&amp;z=15&amp;ll=51.459847, -2.609405" 
+					width="100%" height="480"/>
+
+				</div>
+
+				<div class = "modal-footer">
+
+					<a class = "btn" data-dismiss = "modal">Return</a>
+
+				</div>
+
+			</div> <!-- End of modal content. -->
+
+		</div> <!-- End of modal dialogue. -->
+
+	</div> <!-- End of modal. -->
+
+		<!-- This holds all of the information for the email modal. -->
+	<div id = "email_modal_overlay">
+
+		<div id = "email_modal_inner">
+
+			<!-- Create a link so that a hand hovers over the X and users know
+				 it is a button. -->
+			<a href = "#" id = "close">
+
+				<div class = "email_modal_quit">
+
+						<object data="icons/quit.svg" type="image/svg+xml"
+								class = "email_modal_icon">
+								Exit
+						</object>
+
+				</div>
+
+			</a>
+
+			<h1 class = "mod_head">Email Me</h1>
+
+			<br/>
+
+			<!-- Start of email modal. -->
+
+			<!-- Feeds back to the server and sends an email. -->
+
+			<!-- Email address being sent to. -->
+			jc1175@my.bris.ac.uk
+
+			<!-- Their email address entry part. -->
+			<br/>
+
+			<label for = "sender_email" class = "email_label">Sender Email</label>
+
+			<br/>
+
+			<input id = "sender_email" type = "text" 
+				   placeholder = "Your email address." />
+
+			<br/>
+
+			<!-- The content of the email that they want to send. -->
+			<label for = "content" class = "email_label"> 
+				Content
+			</label>
+
+			<br/>
+
+			<textarea id = "content" cols = "40" rows = "10" 
+					  placeholder = "Your message"></textarea>
+
+			<br/><br/>
+
+			<!-- Send button. -->
+			<button id = "send_email" class = "send_btn">Send Email</button>
+
+			<br/><br/>
+
+			<!-- A small message that can be updated or changed depending on
+				 if the email sent or not. -->
+			<span id = "message" ></span>
+
+			<br/><br/>
+
+			<object data="icons/contact.svg" type="image/svg+xml"
+				    class = "send_modal_icon">
+				    EmailSVG
+			</object>
+
+			<div class = "create_ws_twenty_five"></div>
+
+		</div>
+
+	</div>
+
+	<!-- //////////////////////////////////////////////////////////////////// -->
+	<!-- ///////////////// END OF BOTTOM NAVBAR DEFINITION ////////////////// -->
+	<!-- //////////////////////////////////////////////////////////////////// -->
+
+	<!-- Javascript and JQuery. -->
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script src="http://localhost:8080/socket.io/socket.io.js"></script>
+
+	<script src = "js/bootstrap.js"></script>
+	<script src = "js/popover_script.js"></script>
+	<script src = "js/my_email_modal.js"></script>
+	<script src = "js/emailing_js.js"></script>
+	<script src = "js/stats_gathering.js"></script>
+	<script src = "js/facebook_share.js"></script>
+
+</body>
+
+</html>

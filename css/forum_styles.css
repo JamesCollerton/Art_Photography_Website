@@ -1,0 +1,58 @@
+/* Styles used in the forum page. */
+
+.hide
+{
+	visibility: hidden;
+}
+
+/* So the buttons containing the icons don't have solid
+backgrounds. */
+
+.icon_button
+{
+	background: transparent;
+    border: none;
+}
+
+/* So the clicking hand appears above the SVG when
+we use it as a button. */
+
+object{
+    pointer-events: none;
+}
+
+/* Formats input so they aren't boxes, but a single
+line. */
+
+.input_line 
+{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    margin-right: 30px;
+}
+
+/* So the send buttons are formatted as just blue text.*/
+
+.send_button
+{
+	background: transparent;
+    border: none;
+    color:rgba(64, 154, 231, 1);
+}
+
+/* Usernames are blue and bullet points are removed from
+the list. */
+
+.username_list
+{
+	list-style: none;
+	color:rgba(64, 154, 231, 1);
+}
+
+/* Messages are black with no bullet points. */
+
+.messages_list
+{
+	list-style: none;
+}

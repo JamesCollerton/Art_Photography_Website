@@ -1,0 +1,46 @@
+/* Formatting for the User Stats page. */
+
+body
+{
+  padding: 0; 
+  margin: 0; 
+  min-width: 500px; 
+}
+
+form 
+{
+    font-size: 15px;
+}
+
+.user_stats_page
+{
+  padding-top: 10%;
+}
+
+/* Formatting for the axes of the graph. */
+.axis path,
+.axis line {
+    fill: none;
+    stroke: black;
+    shape-rendering: crispEdges;
+}
+
+.axis text {
+    font-size: 10px;
+}
+
+legend
+{
+  font-size: 30px;
+}
+
+.update_stats_btn {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  color:rgba(64, 154, 231, 1);
+}
+
+.control_panel {
+  margin-left: 40px;
+}
