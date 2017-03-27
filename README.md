@@ -11,7 +11,6 @@ This was written as part of my university course on web technologies. Included i
 
 <br />
 
-Section                    | Description 
-:-------------------------:|:-----------:
-![alt text](/README_Images/Home Screen.png  "Home Screen")  | ![alt text](/README_Images/Login_Screen.png "Home_Screen")
-
+App Home Screen            | App Login Screen
+:-------------------------:|:-------------------------:
+![alt text](/README_Images/Home_Screen.png  "Login_Screen")  | ![alt text](/README_Images/Login_Screen.png "Home_Screen")
