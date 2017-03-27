@@ -11,7 +11,7 @@ This was written as part of my university course on web technologies. Included i
 
 <br />
 
-Section                    | Description |
-:-------------------------:|:-----------:|
-![alt text](/README_Images/Home Screen.png  "Home Screen")  | 
+Section                    | Description 
+:-------------------------:|:-----------:
+![alt text](/README_Images/Home Screen.png  "Home Screen")  | ![alt text](/README_Images/Login_Screen.png "Home_Screen")
 
